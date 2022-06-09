@@ -18,8 +18,11 @@
 # limitations under the License.
 ##########################################################################
 */
+
+#include <stddef.h>
+
 typedef struct rdkx_logger_module_s { char *name; unsigned char id; } rdkx_logger_module_t;
 typedef struct rdkx_logger_level_s  { char *name; unsigned char level; } rdkx_logger_level_t;
 
-struct rdkx_logger_module_s *rdkx_logger_module_str_to_index(const char *str, unsigned int len);
-struct rdkx_logger_level_s * rdkx_logger_level_str_to_num(const char *str, unsigned int len);
+struct rdkx_logger_module_s *rdkx_logger_module_str_to_index(const char *str, size_t len);
+struct rdkx_logger_level_s * rdkx_logger_level_str_to_num(const char *str, size_t len);
